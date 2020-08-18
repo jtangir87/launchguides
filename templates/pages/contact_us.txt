@@ -1,0 +1,8 @@
+
+New Contact Form Submitted
+
+From: {{name}}
+Phone: {{phone}}
+Email: {{email}}
+
+Message: {{message}}

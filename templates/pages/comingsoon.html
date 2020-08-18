@@ -1,0 +1,290 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Launch Guides | COMING SOON</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.mylaunchguides.com" />
+  <meta property="og:title" content="Launch Guides" />
+  <meta property="og:description" content="Helping entrepreneurs get their business ideas off the ground" />
+  <meta property="og:image" content="{% static 'comingsoon/img/launch-guides-og.png' %}" />
+  <!-- Favicons -->
+  <link href="{% static 'comingsoon/img/favicon.ico' %}" rel="icon">
+  <link href="{% static 'comingsoon/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'comingsoon/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'comingsoon/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'comingsoon/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center">
+        <h1>Coming Soon</h1>
+        <img src="{% static 'comingsoon/img/lg-logo.png' %}" class="img-fluid logo-centered">
+      
+      <div class="countdown d-flex justify-content-center" data-count="2020/10/01">
+        <div>
+          <h3>%D</h3>
+          <h4>Days</h4>
+        </div>
+        <div>
+          <h3>%H</h3>
+          <h4>Hours</h4>
+        </div>
+        <div>
+          <h3>%M</h3>
+          <h4>Minutes</h4>
+        </div>
+        <div>
+          <h3>%S</h3>
+          <h4>Seconds</h4>
+        </div>
+      </div>
+
+      <div class="subscribe">
+        <h4>Subscribe now to get the latest updates!</h4>
+        <form action="{% url 'subscribe' %}" id="subscribeForm" method="post" role="form" class="php-email-form">
+            {% csrf_token %}
+          <div class="subscribe-form">
+            <input type="email" name="email" placeholder="Email"><input type="submit" value="Subscribe">
+          </div>
+        </form>
+      </div>
+<!-- 
+      <div class="social-links text-center">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="icofont-skype"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+      </div> -->
+
+    </div>
+  </header><!-- End #header -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Helping entrepreneurs get their business ideas off the ground</h2>
+            <h3>Start your business the right way from the start</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Launch Guides LLC is a resource for entrepreneurs who need to a place to start launching their new business idea. With a combined 30 years ofs
+              experience starting and running successful businesses we are here to make sure you start off on the right foot. 
+            </p>
+            <ul>
+              <li><i class="icofont-check"></i> Incorporations, LLC & Fictitious Name Registrations</li>
+              <li><i class="icofont-check"></i> Logo , Business Card, Literature Design & Printing</li>
+              <li><i class="icofont-check"></i> Websites, Landing Pages, Social Media Marketing & Management</li>
+            </ul>
+            <p class="font-italic">
+              We look forward to building a partnership with you and watching your new business grow!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+        </div>
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="info-wrap">
+              <div class="row">
+                <div class="col-lg-4 info">
+                  <i class="icofont-google-map"></i>
+                  <h4>Location:</h4>
+                  <p>626 Byberry Rd<br>Philadelphia, PA 19116</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="icofont-envelope"></i>
+                  <h4>Email:</h4>
+                  <p><a href="mailto:info@mylaunchguides.com">info@mylaunchguides.com</a></p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="icofont-phone"></i>
+                  <h4>Call:</h4>
+                  <p><a href="tel:18335286240">+1 (833) LAUNCH-0</a><br><a href="tel:18335286240">+1 (833) 528-6240 </a></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-10">
+            <form action="{% url 'contact_us' %}" id="contactForm" method="post" role="form" class="php-email-form js-contact-form">
+                {% csrf_token %}
+              <div class="form-row">
+                <div class="col-md-4 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+
+                </div>
+                <div class="col-md-4 form-group">
+                  <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone Number" data-rule="phone" data-msg="Please enter a valid email" />
+
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+  
+                  </div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+
+  </main><!-- End #main -->
+
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="modal-contact-us-success">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Your message has been sent. We will contact you ASAP!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="modal-subscribe-success">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Subscribe</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Thank you for subscribing! Stay tuned for our latest news and valuable information!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Launch Guides, LLC</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://www.elevatedwebsystems.com" target="_blank">Elevated Web Systems</a>
+      </div>
+    </div>
+  </footer><!-- End #footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'comingsoon/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'comingsoon/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'comingsoon/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'comingsoon/vendor/jquery-countdown/jquery.countdown.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'comingsoon/js/main.js' %}"></script>
+  <script>
+      $(function () {
+
+            /* Functions */
+
+            var saveForm = function () {
+                var form = $(this);
+                $.ajax({
+                    url: form.attr("action"),
+                    data: form.serialize(),
+                    type: form.attr("method"),
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.form_is_valid) {
+                            $("#modal-contact-us-success").modal("show");
+                            $( '#contactForm' ).each(function(){
+                                this.reset();
+                            });
+                        }
+                    }
+                });
+                return false;
+            };
+
+            var subscribeForm = function () {
+                var form = $(this);
+                $.ajax({
+                    url: form.attr("action"),
+                    data: form.serialize(),
+                    type: form.attr("method"),
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.form_is_valid) {
+                            $("#modal-subscribe-success").modal("show");
+                            $( '#subscribeForm' ).each(function(){
+                                this.reset();
+                            });
+                        }
+                    }
+                });
+                return false;
+            };
+            /* Binding */
+
+            $("#contactForm").on("submit", saveForm);
+            $("#subscribeForm").on("submit", subscribeForm);
+
+
+            });
+  </script>
+</body>
+
+</html>
